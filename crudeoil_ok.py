@@ -618,7 +618,7 @@ trend_line_visibility = [False] * len(all_trend_lines)
 
 # Initialize Dash app
 app = dash.Dash(__name__, suppress_callback_exceptions=True)
-
+server = app.server
 # MongoDB setup
 client = MongoClient(MONGO_CONNECTION_STRING)
 db = client[DB_NAME]
